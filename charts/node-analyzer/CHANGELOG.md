@@ -4,6 +4,19 @@
 
 This file documents all notable changes to Sysdig Node Analyzer Helm Chart. The release numbering uses [semantic versioning](http://semver.org).
 
+## 1.8.4
+### Minor changes:
+* HostScanner, bumped to version 0.3.1 which brings:
+	* Security fix for CVE-2022-32149
+	* Support for GoogleCOS hosts non-os packages scan
+	* Added new directories to default set scanned
+		* Generic binaries (such as docker/containerd and infra tooling)
+			* /bin,/sbin,/usr/bin,/usr/sbin,/usr/share,/usr/local
+		* Libraries (such as default python libs)
+			* /usr/lib,/usr/lib64
+		* GoogleCOS tooling directories
+			* /var/lib/google,/var/lib/toolbox,/var/lib/cloud
+
 ## 1.8.3
 ### Minor changes:
 * BenchmarkRunner
